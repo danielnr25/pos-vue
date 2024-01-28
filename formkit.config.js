@@ -15,7 +15,7 @@ const config = {
         fileItem: "hidden",
       },
       submit:{
-        input:  "$reset bg-indigo-600 hover:bg-indigo-700 text-white font-bold p-2 rounded uppercase w-full",
+        input:  "$reset bg-indigo-800 hover:bg-indigo-700 text-white font-bold p-2 rounded uppercase w-full",
       }
 
     }),

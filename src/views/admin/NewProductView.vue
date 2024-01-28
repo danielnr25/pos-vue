@@ -33,15 +33,15 @@
 </script>
 
 <template>
-    <div>
+    <div class="px-10 lg:px-0 lg:pb-10">
         <Link
             to="products"
         >Volver</Link>
 
-        <h1 class="text-4xl font-black my-10">Nuevo Producto</h1>
+        <h1 class="text-4xl font-bold my-8">Nuevo Producto</h1>
 
-        <div class="flex justify-center bg-white shadow">
-            <div class="mt-10 p-10 w-full 2xl:w-2/4">
+        <div class="flex justify-center bg-white shadow max-w-4xl mx-auto">
+            <div class="mt-2 p-10 w-full 2xl:w-4/4">
 
                 <FormKit
                     type="form"

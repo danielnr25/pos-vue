@@ -1,7 +1,12 @@
 <script setup>
-    import { RouterLink } from 'vue-router'
+    import { RouterLink, useRoute } from 'vue-router'
     import Link from './Link.vue';
     import Logo from './Logo.vue';
+
+  const route = useRoute();
+  const isLinkActive = (name) => route.name === name;
+
+
 </script>
 
 
@@ -11,16 +16,18 @@
             <Logo />
         </div>
 
-        <nav>
+        <nav class="space-x-4">
             <RouterLink
                 :to="{name: 'products'}"
                 class="rounded text-white font-bold p-2"
+                :class="{ 'border-b-2 border-indigo-500 text-indigo-500': isLinkActive('products') }"
             >
                 Productos
             </RouterLink>
             <RouterLink
                 :to="{name: 'sales'}"
                 class="rounded text-white font-bold p-2"
+                :class="{ 'border-b-2 border-indigo-500 text-indigo-500': isLinkActive('sales') }"
             >
                 Ventas
             </RouterLink>

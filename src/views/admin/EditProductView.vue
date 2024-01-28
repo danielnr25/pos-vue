@@ -45,16 +45,17 @@
 </script>
 
 <template>
-    <div class="mt-10">
-        <Link
-            to="products"
-        >
-            Volver
-        </Link>
-            <h1 class="text-4xl my-10 font-extrabold">Editar Producto</h1>
+   <div class="px-10 lg:px-0 lg:pb-10">
+    <div class="mt-1">
+      <Link
+          to="products"
+      >
+          Volver
+      </Link>
+          <h1 class="text-4xl my-8 font-bold">Editar Producto</h1>
 
-            <div class="flex justify-center bg-white shadow">
-            <div class="mx-auto mt-10 p-10 w-full  2xl:w-2/4">
+          <div class="flex justify-center bg-white shadow max-w-4xl mx-auto">
+            <div class="mx-auto mt-3 p-10 w-full  2xl:w-4/4">
               
                 <FormKit
                     type="form"
@@ -139,6 +140,7 @@
 
                 </FormKit>
             </div>
-        </div>
-        </div>
+          </div>
+  </div>
+   </div>
 </template>

@@ -17,7 +17,7 @@
         <p class="text-4xl font-bold text-gray-900">Resumen de Venta</p>
         <ul 
             role="list"
-            class="mt-6 divide-y divide-gray-200 "
+            class="mt-6 divide-y divide-gray-400 "
         >
             <ShoppingCartItem
                 v-for="item in cart.items"
@@ -52,7 +52,7 @@
 
         <button
             type="button"
-            class="mt-10 w-full bg-indigo-600 hover:bg-indigo-700 text-white uppercase font-bold p-3"
+            class="mt-10 w-full bg-blue-600 hover:bg-blue-700 text-white uppercase font-bold p-3"
             @click="cart.checkout"
         >
             Confirmar Compra

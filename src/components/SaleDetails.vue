@@ -10,14 +10,14 @@
 </script>
 
 <template>
-    <div class="border-t border-gray-200 space-y-6 py-6 bg-slate-300 px-3 rounded-md">
+    <div class="border-t border-gray-200 shadow space-y-6 py-6 bg-gray-50 px-3 rounded-md">
         <h2 class="text-2xl font-bold">Detalles Venta:</h2>
         <p class="text-xl font-semibold text-blue-700">Productos Vendidos</p>
 
         <ul role="list" class="mt-6 divide-y divide-gray-900 border-t border-gray-200  font-medium text-gray-700">
             <li
                 v-for="item in sale.items"
-                class="flex space-x-6 py-6 px-3 rounded bg-slate-200"
+                class="flex space-x-6 py-6 px-3 rounded bg-slate-100"
             >
                 <img 
                     :src="item.image" 
@@ -33,7 +33,7 @@
             </li>
         </ul>
 
-        <dl class="space-y-6 border-t border-gray-200 pt-6 text-sm font-medium text-gray-800 bg-slate-200 px-3 rounded pb-4">
+        <dl class="space-y-6 border-t border-gray-200 pt-6 text-sm font-medium text-gray-800 bg-slate-100 px-3 rounded pb-4">
             <Amount>
                 <template #label>Subtotal:</template>
                 {{ formatCurrency(sale.subtotal) }}

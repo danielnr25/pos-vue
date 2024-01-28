@@ -12,9 +12,10 @@ export const useProductsStore = defineStore('products', () => {
     const selectedCategory = ref(1)
 
     const categories = [
-        { id: 1, name: 'Sudaderas'},
+        { id: 1, name: 'Polos'},
         { id: 2, name: 'Zapatillas'},
-        { id: 3, name: 'Lentes'},
+        { id: 3, name: 'Relojes'},
+        { id: 4, name: 'Carteras'}
     ]
     
     const q = query( 
@@ -29,7 +30,7 @@ export const useProductsStore = defineStore('products', () => {
     }
 
     async function updateProduct(docRef, product) {
-        const { image, url, ...values} = product
+        const {image, url, ...values} = product
         if(image.length) {
             await updateDoc(docRef, {
                 ...values,
@@ -41,7 +42,7 @@ export const useProductsStore = defineStore('products', () => {
     }
 
     async function deleteProduct(id) {
-        if(confirm('¿Eliminar Producto?')) {
+            
             const docRef = doc(db, 'products', id)
             const docSnap = await getDoc(docRef)
             const {image} = docSnap.data()
@@ -50,8 +51,10 @@ export const useProductsStore = defineStore('products', () => {
             await Promise.all([
                 deleteDoc(docRef),
                 deleteObject(imageRef)
-            ])
-        }
+            ]);
+
+            hideDeleteModal.value = false;
+      
     }
 
     const categoryOptions = computed(() => {
