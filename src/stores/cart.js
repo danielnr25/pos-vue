@@ -76,6 +76,8 @@ export const useCartStore = defineStore('cart', () => {
             $reset()
             coupon.$reset()
 
+            window.alert('¡Compra realizada con éxito!');
+
        } catch (error) {
             console.log(error)
        }

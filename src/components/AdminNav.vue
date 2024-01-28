@@ -6,7 +6,7 @@
 
 
 <template>
-    <header class="px-10 py-5 bg-gray-700 flex justify-between absolute top-0 w-full z-10">
+    <header class="px-10 py-5 bg-gray-900 flex justify-between absolute top-0 w-full z-10">
         <div>
             <Logo />
         </div>
